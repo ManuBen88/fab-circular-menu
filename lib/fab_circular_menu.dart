@@ -6,6 +6,7 @@ import 'package:vector_math/vector_math.dart' as vector;
 typedef DisplayChange = void Function(bool isOpen);
 
 class FabCircularMenu extends StatefulWidget {
+  final bool fabOpen;
   final List<Widget> children;
   final Alignment alignment;
   final Color? ringColor;
@@ -27,6 +28,7 @@ class FabCircularMenu extends StatefulWidget {
 
   FabCircularMenu(
       {Key? key,
+      this.fabOpen = false,
       this.alignment = Alignment.bottomRight,
       this.ringColor,
       this.ringDiameter,
@@ -79,7 +81,7 @@ class FabCircularMenuState extends State<FabCircularMenu>
   Animation<Color?>? _colorAnimation;
   late Animation _colorCurve;
 
-  bool _isOpen = false;
+  bool _isOpen = fabOpen;
   bool _isAnimating = false;
 
   @override
