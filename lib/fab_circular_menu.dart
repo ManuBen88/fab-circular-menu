@@ -81,7 +81,7 @@ class FabCircularMenuState extends State<FabCircularMenu>
   Animation<Color?>? _colorAnimation;
   late Animation _colorCurve;
 
-  bool _isOpen = fabOpen;
+  bool _isOpen = true;
   bool _isAnimating = false;
 
   @override
