@@ -108,7 +108,7 @@ class FabCircularMenuState extends State<FabCircularMenu>
           ..addListener(() {
             setState(() {});
           });
-     if (fabOpen) { 
+     if (widget.fabOpen) { 
        if (_isOpen) {
           close();
        } else {
