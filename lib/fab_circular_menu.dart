@@ -108,12 +108,13 @@ class FabCircularMenuState extends State<FabCircularMenu>
           ..addListener(() {
             setState(() {});
           });
-
-                if (_isOpen) {
-                  close();
-                } else {
-                  open();
-                }
+     if (fabOpen) { 
+       if (_isOpen) {
+          close();
+       } else {
+          open();
+       }
+     }  
   }
 
   @override
